@@ -1,3 +1,8 @@
 # Tip Of My Shoe
 
-## Capstone Project For 2019-2020 SE4G06
+#### Capstone Project
+#### SE4G06 - Group 23
+#### McMaster University
+#### 2019-2020
+
+Meetings Thursdays at 9:30am.
