@@ -1,4 +1,4 @@
-# Tip Of My Shoe
+![ds](Graphics/Branding/Git-Brand.jpg)
 
 #### Capstone Project
 #### SE4G06 - Group 23
