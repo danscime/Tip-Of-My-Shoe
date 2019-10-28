@@ -27,15 +27,15 @@ SFWRENG 4G06\\
 	\hline
 	Chris Dibussolo & dibussoc & 400070368\\
 	\hline
-  Andrew Lucentini & lucenta & 001430150\\
-  \hline
+    Andrew Lucentini & lucenta & 001430150\\
+    \hline
 	Owen McNeil & mcneilo & 400065750 \\
 	\hline
 	Daniel Scime & scimed1 & 400069926\\
 	\hline
-  Ashley Williams & willia18 & 400081787\\
+    Ashley Williams & willia18 & 400081787\\
 	\hline
-  Lucas Zacharewicz & zacharel & 400054446\\
+      Lucas Zacharewicz & zacharel & 400054446\\
 	\hline
 \end{tabular}
 \end{center}
@@ -66,39 +66,97 @@ Tip of My Shoe will allow users to provide a picture of a shoe, in order to rece
 \subsection{Stakeholders}
 
 \subsubsection{The Client}
+The clients are the members software team designing this project. It is not being created for an external client with external problems or goals. Any and all requirements come from the software team in this case.
 
 \subsubsection{The Customers}
+The customers will be any end user of the program. All requirements and functionalities are made with the end users in mind. Design will be conducted in a way such that the end application has a minimal and simplistic, yet concise interface. The experience should be easy and not frustrating for the user.
 
 \subsection{Normal Operation/Use Case}
+\begin{enumerate}
+    \item User sees a shoe that they are interested in finding matches for.
+    \item User takes a picture of shoe, preferably from the side profile of the shoe.
+    \item User uploads picture to the program.
+    \item After some small amount of wait time, the user will receive pictures and clickable links to similar shoes.
+    \item User can either stay on the same page, click a link, or reset the program by uploading another picture.
+    
+\end{enumerate}
 
 \subsection{Context Diagram}
 
-% \begin{figure}[!htbp]
-%   \caption{Tip of My Shoe Context Diagram}
-%   \centering
-%     \includegraphics[width=0.8\textwidth]{req_context_diagram}
-% \end{figure}
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/Context-Diagram.png}
+  \caption{Context Diagram}
+\end{figure}
 
-
-\subsection{Monitored Controlled Variables}
+\newpage
+\subsection{System Level Variables}
 
 \subsubsection{Monitored Variables}
 
+\begin{table}[!htbp]
+\begin{center}
+\begin{tabular}{|p{5cm}|p{10cm}|}
+	\hline
+	\bf Variable & \bf Description \\
+	\hline
+	in\_image & Input image taken from user. Compared to database of images in order to find similarities. \\
+	\hline
+\end{tabular}
+\caption{Monitored Variables}
+\end{center}
+\end{table}
+
 \subsubsection{Controlled Variables}
+
+\begin{table}[!htbp]
+\begin{center}
+\begin{tabular}{|p{5cm}|p{10cm}|}
+	\hline
+	\bf Variable & \bf Description \\
+	\hline
+    out\_listOfNames & Output list of names of shoes. Each will have corresponding images and links. \\
+	\hline
+	out\_listOfLinks & Output list of links corresponding to different shoes. \\
+	\hline
+    out\_listOfImages & Output list of images. Found through backend algorithms with input image. \\
+	\hline
+\end{tabular}
+\caption{Controlled Variables}
+\end{center}
+\end{table}
 
 \subsubsection{Constants}
 
-\subsubsection{Relevant Facts}
+\begin{table}[!htbp]
+\begin{center}
+\begin{tabular}{|p{5cm}|p{10cm}|}
+	\hline
+	\bf Constant & \bf Description \\
+	\hline
+	Database Of Names & List of all currently acquired names of shoes. Stored internally for access when needed. \\
+	\hline
+	Database Of Links & List of all currently acquired links corresponding to different shoes. \\
+	\hline
+	Database Of Images & List of all currently acquired images of shoes. Used by comparing to input image. \\
+	\hline
+\end{tabular}
+\caption{Constants}
+\end{center}
+\end{table}
 
-\begin{itemize}
-\item
-\end{itemize}
+% \subsubsection{Relevant Facts}
+
+% \begin{itemize}
+% \item
+% \end{itemize}
 
 \subsubsection{Relevant Assumptions}
 
-The target user of this product is assumed to be:
+The target user of this product is assumed to:
 \begin{itemize}
-\item
+\item Have general phone/computer knowledge. Specifically able to locate a picture file and upload it to the system.
+\item Understand basic signifiers. One example would be highlighted links should be assumed clickable without specific instructions.
 \end{itemize}
 
 \section{Functional Requirements}
@@ -114,8 +172,8 @@ The target user of this product is assumed to be:
 
 \begin{figure}[H]
   \centering
-    \includegraphics[width=0.8\textwidth]{images/TOMS.png}
-    \caption{Functional Decomposition Diagram}
+  \includegraphics[width=0.8\textwidth]{images/Functional-Decomposition.png}
+  \caption{Functional Decomposition Diagram}
 \end{figure}
 
 
@@ -153,7 +211,7 @@ The target user of this product is assumed to be:
 This section is concerned with requirements that make the product usable and acceptable to the users. This is an important factor pertaining to our project.
 
 \subsubsection{Ease of Use Requirements}
-\begin{itemize}
+\begin{itemize}{}
     \item \textbf{Requirement:} The software should be usable by all potential customers within reason. The target age is 8+ years old.
     
     \textbf{Rationale:} Maximizing the domain of users will allow for large data collection, hence more accurate results.
@@ -312,13 +370,9 @@ Excessive focus on fancy features beyond the scope of the project will lead to t
 
 \subsection{Costs}
 
-\bibliographystyle{plainnat}
-
-\bibliography{SRS}
-
-\newpage
-
-\section{References}
-
+% \newpage
+% \section{References}
+% \bibliographystyle{plainnat}
+% \bibliography{SRS}
 
 \end{document}
