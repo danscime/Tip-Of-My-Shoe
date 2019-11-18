@@ -7,4 +7,4 @@ doc:
 	pdflatex $(document)
 
 clean:
-	rm -f *.log *.aux *.toc
+	rm -f *.log *.aux *.toc *.out *.lof *.lot
