@@ -1,0 +1,71 @@
+\documentclass[12pt, titlepage]{article}
+\usepackage{tabularx}
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{tikz-timing}
+\usepackage{setspace}
+\usepackage{float}
+\doublespacing
+
+\newcommand{\pnote}[1]{{\langle \text{#1} \rangle}}
+
+\title{
+McMaster University\\
+SFWRENG 4G06\\
+\bigskip\bigskip\bigskip
+{\bf Tip of My Shoe - Contract\\}
+\bigskip\bigskip\bigskip\bigskip
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+	\hline
+	\bf Member Name & \bf Mac ID & \bf Student Number\\
+	\hline
+	\hline
+	Chris Dibussolo & dibussoc & 400070368\\
+	\hline
+    Andrew Lucentini & lucenta & 001430150\\
+    \hline
+	Owen McNeil & mcneilo & 400065750 \\
+	\hline
+	Daniel Scime & scimed1 & 400069926\\
+	\hline
+    Ashley Williams & willia18 & 400081787\\
+	\hline
+      Lucas Zacharewicz & zacharel & 400054446\\
+	\hline
+\end{tabular}
+\end{center}
+\end{table}
+\date{\today}
+}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+% -----------------------------------------------------------------------------
+
+\section{Project Contract}
+
+While an effort will be made to meet all requirements stated in the requirements document, the final version of Tip of My Shoe is guaranteed to:
+
+\begin{enumerate}
+    \item Support user interaction via a website and/or mobile app(s).
+    \item Accept a user photo.
+    \item Identify, to a reasonable certainty, whether or not the image is of a shoe.
+    \item Reject a user-provided image if it is not a shoe, or if it is not of suitable quality for proper processing, and notify the user accordingly.
+    \item Attempt to match shoes via user-provided images using a pre-existing database of high fashion and well-branded shoes. If no match can be made, the user will be notified as such.
+    \item If a match is made, identify the shoe and give information on it (i.e. Brand, model, etc.).
+    \item Provide links to where the user can potentially purchase any successfully matched shoe.
+\end{enumerate}
+
+
+\end{document}
