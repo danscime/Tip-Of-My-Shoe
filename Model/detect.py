@@ -4,8 +4,9 @@ import sys
 
 arg = sys.argv[1]
 inp = arg
-arg.split(".")
-out = arg[0]+"-detected."+arg[1]
+split = arg.split(".")
+out = split[0]+"-detected."+split[1]
+
 detector = CustomObjectDetection()
 detector.setModelTypeAsYOLOv3()
 detector.setModelPath("ramone_model.h5")
