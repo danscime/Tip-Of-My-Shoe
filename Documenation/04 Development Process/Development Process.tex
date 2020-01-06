@@ -7,7 +7,6 @@
 \usepackage{amsmath}
 \usepackage{tikz-timing}
 \usepackage{setspace}
-\usepackage{float}
 \doublespacing
 
 \usepackage{natbib}
@@ -34,7 +33,7 @@ SFWRENG 4G06\\
 	\bf Member Name & \bf Mac ID & \bf Student Number\\
 	\hline
 	\hline
-	Chris Dibussolo & dibussoc & 400070368\\
+	Chris DiBussolo & dibussoc & 400070368\\
 	\hline
     Andrew Lucentini & lucenta & 001430150\\
     \hline
@@ -61,7 +60,7 @@ SFWRENG 4G06\\
 \listoftables
 
 % -----------------------------------------------------------------------------
-
+\newpage
 \section{Revisions}
 \begin{table}[!htbp]
 \begin{center}
@@ -78,51 +77,209 @@ SFWRENG 4G06\\
 \end{table}
 
 \section{Roles And Responsibilities}
-\subsection{Chris Dibussolo}
+\subsection{Chris DiBussolo}
+\begin{itemize}
+    \item Documentation
+    \item Algorithmic Analysis and Design (Relative scoring etc.)
+    \item Data-set labelling
+    \item Debugging
+\end{itemize}
 \subsection{Andrew Lucentini}
+\begin{itemize}
+    \item Documentation
+    \item Back end - SQL, PHP
+\end{itemize}
 \subsection{Owen McNeil}
+\begin{itemize}
+    \item Documentation
+    \item Back end - API, Database / Storage
+    \item Back end - Server Provisioning 
+\end{itemize}
 \subsection{Daniel Scime}
+\begin{itemize}
+    \item Documentation
+    \item Front end - UI/UX
+    \item Consistency and continuity throughout code and documents
+    \item Style and appearance
+\end{itemize}
 \subsection{Ashley Williams}
+\begin{itemize}
+    \item Documentation
+    \item Front end - UI/UX
+    \item Data-set labelling
+\end{itemize}
 \subsection{Lucas Zacharewicz}
+\begin{itemize}
+    \item Image detection
+    \item AI model training 
+    \item Web scraping for shoe images
+\end{itemize}
 
 \section{Version Control}
+Git will be used to keep track of all our documentation and code. 
 
 \section{List Of Development Tools}
+\begin{itemize}
+\item Python 3
+\item Selenium and LabelImg for web scraping
+\item ImageAI and TensorFlow for machine learning and image recognition
+\item HTML, CSS, JavaScript for front-end
+\item MongoDB, Node.js, Express.js, Nginx for back end
+\end{itemize}
 
 \section{Process Workflow}
-\subsection{Step 1}
-\subsubsection*{Inputs}
-\subsubsection*{Outputs}
-\subsubsection*{Acceptance Criteria}
+\subsection{Step 1: Building a Data Set for Image Recognition}
+\textbf{Inputs:}
+Web scraped photos of shoes \\
+\textbf{Outputs:}
+Data set to be used for model training \\
+\textbf {Acceptance Criteria:}
 
-\subsection{Step 99}
-\subsubsection*{Inputs}
-\subsubsection*{Outputs}
-\subsubsection*{Acceptance Criteria}
+Data set must contain at least 25 distinct shoes and each shoe should have at least 200 photos.
+
+\subsection{Step 2: Building a Basic AI Model}
+\textbf{Inputs: }
+Previously built data set \\
+\textbf{Outputs: }
+Trained model for the data set \\
+\textbf{Acceptance Criteria: }
+
+A photo of a shoe that exists in the data set should be detected with at least 80\% confidence.
+
+\subsection{Step 3: Front End website/application design}
+\textbf{Inputs: }
+N/A \\
+\textbf{Outputs: }
+Intuitive interface \\
+\textbf{Acceptance Criteria: }
+
+A user can supply images and appropriate results will be returned. Users should be able to navigate the interface with little to no instruction.
+
+\subsection{Step 4: Back End Development and Website Algorithm Design}
+\textbf{Inputs: } 
+\begin{itemize}
+    \item Image detection / AI scripts
+    \item Shoe images
+\end{itemize}
+\textbf{Outputs: } 
+\begin{itemize}
+    \item Exposed API
+    \item Likeness Ratings
+\end{itemize}
+\textbf{Acceptance Criteria: }
+
+The API exposes an endpoint that accepts a user's image and sends it to the image detection scripts. The endpoint should return an object containing potential matches, their confidence levels, and any meta data such as shop links.
+
+\subsection{Step 5: Testing and Debugging}
+\textbf{Inputs: }
+Test cases (unexpected input, error handling, etc.) \\
+\textbf{Outputs: }
+Repeatable test suites \\
+\textbf{Acceptance Criteria: }
+The program must pass all of the test cases.
 
 
 \section{Details On Steps To Be Taken}
-\subsection{Step 1}
+\subsection{Step 1: Building a Data Set for Image Recognition}
 \subsubsection*{Tools To Be Used}
-\subsubsection*{Special Instructions For Tools}
-\subsubsection*{What To Put Under Version Control}
-\subsubsection*{Standards To Follow}
-\subsubsection*{Contributors}
+\begin{itemize}
+    \item Python 3
+    \item Selenium
+    \item LabelImg
+\end{itemize}
 
-\subsection{Step 99}
-\subsubsection*{Tools To Be Used}
 \subsubsection*{Special Instructions For Tools}
+\begin{itemize}
+        \item In particular, \textbf{Selenium}, an open source web automation tool will be used to scrape the web for images of desired shoes to build an initial data set to be used for image recognition AI training.
+        \item LabelImg used to label images in the data set with yolov3 format to create relevant .xml files that our model uses to train
+\end{itemize}
 \subsubsection*{What To Put Under Version Control}
-\subsubsection*{Standards To Follow}
+\begin{itemize}
+    \item Python code for the web-scraping. After initial use for testing, can be re-used for building larger data sets.
+    \item The data set. (Probably better to put it in a google drive as it is expected to grow beyond the allowable size of github)
+\end{itemize}
 \subsubsection*{Contributors}
+\begin{itemize}
+    \item Web-scraping: Lucas Zacharewicz
+    \item Image Labelling/data-set building: Project Team
+\end{itemize}
+
+\subsection{Step 2: Building a Basic AI Model}
+\subsubsection*{Tools To Be Used}
+\begin{itemize}
+        \item Python 3
+        \item ImageAI
+        \item TensorFlow (v 1.15, includes gpu accleration)
+\end{itemize}
+\subsubsection*{Special Instructions For Tools}
+\begin{itemize}
+        \item Need to have a version of TensorFlow $<$ 2.0 as imageAi doesn't support $>$ 2. Consequently, Python 3.7 or lower is needed as TensorFlow 1.15 only works on versions of Python up to 3.7
+\end{itemize}
+\subsubsection*{What To Put Under Version Control}
+\begin{itemize}
+        \item Generated models, only the highest epoch from each batch (lower epochs saves of the model are generally less accurate)
+\end{itemize}
+\subsubsection*{Contributors}
+\begin{itemize}
+        \item Lucas Zacharewicz - Model training 
+\end{itemize}\textbf{}
+
+\subsection{Step 3: Front End website/application design}
+\subsubsection*{Tools To Be Used}
+\begin{itemize}
+        \item HTML, CSS, JavaScript
+\end{itemize}
+\subsubsection*{Special Instructions For Tools}
+\begin{itemize}
+        \item N/A
+\end{itemize}
+\subsubsection*{What To Put Under Version Control}
+\begin{itemize}
+        \item All the code files required for the website to run.
+\end{itemize}
+\subsubsection*{Contributors}
+\begin{itemize}
+        \item Daniel Scime, Ashley Williams
+\end{itemize}
+
+\subsection{Step 4: Back End Development and Website Algorithm Design}
+\subsubsection*{Tools To Be Used}
+\begin{itemize}
+        \item MongoDB, Node.js, Express.js, Nginx, PHP, SQL, Python3
+\end{itemize}
+\subsubsection*{Special Instructions For Tools}
+\begin{itemize}
+        \item Python3 will be used for consistency with the machine learning code. The main algorithms/functions to be developed are ones dealing with the likeness calculation that gives a quantifiable value to how well the matched shoe resembles the target image.
+\end{itemize}
+\subsubsection*{What To Put Under Version Control}
+\begin{itemize}
+        \item All the code files required for the website to run.
+\end{itemize}
+\subsubsection*{Contributors}
+\begin{itemize}
+        \item Owen McNeil, Andrew Lucentini, Chris DiBussolo
+\end{itemize}
+
+\subsection{Step 5: Testing and Debugging}
+\subsubsection*{Tools To Be Used}
+\begin{itemize}
+        \item TBD
+\end{itemize}
+\subsubsection*{Special Instructions For Tools}
+\begin{itemize}
+        \item TBD
+\end{itemize}
+\subsubsection*{What To Put Under Version Control}
+\begin{itemize}
+        \item All the code files required for the website to run.
+\end{itemize}
+\subsubsection*{Contributors}
+\begin{itemize}
+        \item Owen McNeil, Andrew Lucentini, Chris DiBussolo
+\end{itemize}
 
 \section{Handling Changes}
-\subsection{Bug Tracking}
-\subsection{Change Requests}
-\subsection{Classifying Changes}
-\subsection{Deciding How To Handle}
-\subsection{Verifying Completion}
-
+Github's issue tracking will be used to deal with changes to development artefacts.  All issues will be labeled appropriately according to their "type" (e.g. bug, enhancement, etc).  Functional changes will be prioritized over non-functional.  Issues will be assigned to members as needed and should be related to their delegated role.  During weekly group meetings, we will discuss issue resolution, verify each other's work and determine other possible changes.
 
 
 
