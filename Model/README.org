@@ -10,6 +10,10 @@
 | Balenciaga Tripple S              |        |
 | Common Projects Achillies Low     |        |
 | Common Projects Chelsea Boot      |        |
+| Nike Air Max                      |        |
+| Nike Air Force 1                  |        |
+| Doc Marten 1460s                  |        |
+| Yeezy 350                         |        |
 
 * Steps for labeling
 1. Download images for shoe with script

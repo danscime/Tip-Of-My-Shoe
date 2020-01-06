@@ -25,17 +25,17 @@ for x in browser.find_elements_by_xpath('//div[contains(@class,"rg_meta")]'):
     print "Total Count:", counter
     print "Succsessful Count:", succounter
     print "URL:",json.loads(x.get_attribute('innerHTML'))["ou"]
-
-    img = json.loads(x.get_attribute('innerHTML'))["ou"]
-    imgtype = json.loads(x.get_attribute('innerHTML'))["ity"]
-    try:
-        req = urllib2.Request(img, headers={'User-Agent': header})
-        raw_img = urllib2.urlopen(req).read()
-        File = open(os.path.join(searchterm , searchterm + "_" + str(counter) + "." + imgtype), "wb")
-        File.write(raw_img)
-        File.close()
-        succounter = succounter + 1
-    except:
+    if "mrporter" not in (json.loads(x.get_attribute('innerHTML'))["ou"]):
+        img = json.loads(x.get_attribute('innerHTML'))["ou"]
+        imgtype = json.loads(x.get_attribute('innerHTML'))["ity"]
+        try:
+            req = urllib2.Request(img, headers={'User-Agent': header})
+            raw_img = urllib2.urlopen(req).read()
+            File = open(os.path.join(searchterm , searchterm + "_" + str(counter) + "." + imgtype), "wb")
+            File.write(raw_img)
+            File.close()
+            succounter = succounter + 1
+        except:
             print "can't get img"
 
 print succounter, "pictures succesfully downloaded"
