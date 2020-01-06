@@ -1,0 +1,19 @@
+| Shoe                              | Status |
+|-----------------------------------+--------|
+| Rick Owens Ramones                | DONE   |
+| Rick Owens Geobaskets             | DONE   |
+| Rick Owens x Addias Runners       | DONE   |
+| Rick Owens x Addias Tech Runners  | DONE   |
+| Rick Owens x Addias Level Runners | DONE   |
+| Balenciaga Speed Sneaker          | DONE   |
+| Balenciaga Arenas                 | DONE   |
+| Balenciaga Tripple S              |        |
+| Common Projects Achillies Low     |        |
+| Common Projects Chelsea Boot      |        |
+
+* Steps for labeling
+1. Download images for shoe with script
+1. rm *. to remove files without extensions
+2. Skim for relavent photos
+3. Go through once with labelimg to find bad files and delete them
+4. Label the shoes
