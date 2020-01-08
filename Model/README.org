@@ -7,8 +7,8 @@
 | Rick Owens x Addias Level Runners | DONE   |
 | Balenciaga Speed Sneaker          | DONE   |
 | Balenciaga Arenas                 | DONE   |
-| Balenciaga Tripple S              |        |
-| Common Projects Achillies Low     |        |
+| Balenciaga Tripple S              | DONE   |
+| Common Projects Achillies Low     | DONE   |
 | Common Projects Chelsea Boot      |        |
 | Nike Air Max                      |        |
 | Nike Air Force 1                  |        |
