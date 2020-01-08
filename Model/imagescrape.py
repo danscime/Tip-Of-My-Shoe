@@ -25,7 +25,7 @@ for x in browser.find_elements_by_xpath('//div[contains(@class,"rg_meta")]'):
     print "Total Count:", counter
     print "Succsessful Count:", succounter
     print "URL:",json.loads(x.get_attribute('innerHTML'))["ou"]
-    if "mrporter" not in (json.loads(x.get_attribute('innerHTML'))["ou"]) and "images.asos" not in (json.loads(x.get_attribute('innerHTML'))["ou"]):
+    if "mrporter" not in (json.loads(x.get_attribute('innerHTML'))["ou"]) and "images.asos" not in (json.loads(x.get_attribute('innerHTML'))["ou"]) and "famousfootwear" not in (json.loads(x.get_attribute('innerHTML'))["ou"]):
         img = json.loads(x.get_attribute('innerHTML'))["ou"]
         imgtype = json.loads(x.get_attribute('innerHTML'))["ity"]
         try:
