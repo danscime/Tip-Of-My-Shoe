@@ -1,31 +1,41 @@
 {
     "labels" : [
-        "Rick Owens Ramones"
+        "Balenciaga Arenas",
+        "Balenciaga Speed Sneaker",
+        "Balenciaga Tripple S",
+        "Common Project Achillies Low",
+        "Common Project Chelsea Boot",
+        "Dr Martens 1460",
+        "Rick Owens Geobaskets",
+        "Rick Owens Ramones",
+        "Rick Owens x Adidas Level Runners",
+        "Rick Owens x Adidas Runners",
+        "Rick Owens x Adidas Tech Runners"
     ],
     "anchors" : [
         [
-            330,
-            178,
-            351,
+            343,
+            142,
+            350,
+            231,
+            385,
+            354
+        ],
+        [
+            163,
+            116,
+            231,
+            196,
             258,
-            371,
-            359
+            317
         ],
         [
-            185,
-            169,
-            238,
-            251,
-            257,
-            333
-        ],
-        [
-            46,
-            52,
-            90,
-            124,
-            148,
-            316
+            63,
+            58,
+            122,
+            211,
+            158,
+            328
         ]
     ]
 }

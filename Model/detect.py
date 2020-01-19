@@ -9,7 +9,7 @@ out = split[0]+"-detected."+split[1]
 
 detector = CustomObjectDetection()
 detector.setModelTypeAsYOLOv3()
-detector.setModelPath("ramone_model.h5")
+detector.setModelPath("shoetect.h5")
 detector.setJsonPath("detection_config.json")
 detector.loadModel()
 detections = detector.detectObjectsFromImage(input_image=inp, output_image_path=out)
