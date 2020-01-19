@@ -1,3 +1,7 @@
+* Shoetect Model
+** Download Link
+https://drive.google.com/open?id=15UEJ_aOjVhNhsGBEiMiguYqVz_4yqxmQ
+** Progress
 | Shoe                              | Status |
 |-----------------------------------+--------|
 | Rick Owens Ramones                | DONE   |
@@ -9,10 +13,10 @@
 | Balenciaga Arenas                 | DONE   |
 | Balenciaga Tripple S              | DONE   |
 | Common Projects Achillies Low     | DONE   |
-| Common Projects Chelsea Boot      |        |
+| Common Projects Chelsea Boot      | DONE   |
+| Dr Martens 1460                   | DONE   |
 | Nike Air Max                      |        |
 | Nike Air Force 1                  |        |
-| Dr Martens 1460                   |        |
 | Yeezy 350                         |        |
 
 * Steps for labeling
